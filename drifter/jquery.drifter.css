@@ -1,0 +1,66 @@
+.drifter-main {
+  border: black solid 1px;
+  position: relative;
+  z-index: 1;
+}
+
+.drifter-cube {
+  position: absolute;
+  border: red dashed 1px;
+}
+
+.drifter-upBtn, .drifter-downBtn, .drifter-upLeftBtn, .drifter-upRightBtn, .drifter-downLeftBtn, .drifter-downRightBtn, .drifter-leftBtn, .drifter-rightBtn {
+  position: absolute;
+  background: #CC0000;
+  width: 5px;
+  height: 5px;
+  z-index: 5;
+}
+
+.drifter-upBtn {
+  top: -4px;
+  left: 50%;
+  cursor: n-resize;
+}
+
+.drifter-downBtn {
+  bottom: -4px;
+  left: 50%;
+  cursor: s-resize;
+}
+
+.drifter-upLeftBtn {
+  top: -4px;
+  left: -4px;
+  cursor: nw-resize;
+}
+
+.drifter-upRightBtn {
+  top: -4px;
+  right: -4px;
+  cursor: ne-resize;
+}
+
+.drifter-downLeftBtn {
+  bottom: -4px;
+  left: -4px;
+  cursor: sw-resize;
+}
+
+.drifter-downRightBtn {
+  bottom: -4px;
+  right: -4px;
+  cursor: se-resize;
+}
+
+.drifter-leftBtn {
+  top: 45%;
+  left: -4px;
+  cursor: w-resize;
+}
+
+.drifter-rightBtn {
+  top: 45%;
+  right: -4px;
+  cursor: e-resize;
+}

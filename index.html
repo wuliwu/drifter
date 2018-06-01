@@ -1,0 +1,35 @@
+<html>
+<title>hello</title>
+<head>
+    <style>
+        #text{
+            width: 200px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+<div id="demo">
+</div>
+<p>
+    <button id="btn1">取框的坐标</button><br>
+    <textarea id="text"></textarea>
+</p>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.js"></script>
+<link rel="stylesheet" href="./drifter/jquery.drifter.css">
+<script src="./drifter/jquery.drifter.js"></script>
+<script>
+    var imgUrl = "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1527843148529&di=082c0d30fd2a3be28353e3ac98ba540d&imgtype=jpg&src=http%3A%2F%2Fimg4.imgtn.bdimg.com%2Fit%2Fu%3D3389154259%2C2231815021%26fm%3D214%26gp%3D0.jpg";
+    var drifter = $("#demo").drifter({imgUrl: imgUrl});
+    $("#btn1").click(function () {
+        var cubes = drifter.getCubes();
+        console.log(cubes);
+        var text = '';
+        $.each(cubes, function (k, cube) {
+            text += cube.x1 + ',' + cube.y1 + ';' + cube.x2  + ','+ cube.y2 + '\n';
+        });
+        $("#text").val(text);
+    });
+</script>
+</body>
+</html>
